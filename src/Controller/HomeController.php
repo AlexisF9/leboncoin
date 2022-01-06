@@ -11,13 +11,12 @@ use Twig\Environment;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      * @return Response
      */
-    public function homepage(Environment    $twig)
+    public function homepage()
     {
         $bonjour = 'Bonjour';
-
         return $this->render('Frontend/home.html.twig', ['bonjour' => $bonjour]);
     }
 }
